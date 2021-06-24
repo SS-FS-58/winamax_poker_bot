@@ -19,7 +19,7 @@ from models.bonatablemodel import BonaTableModel
 from configobj import ConfigObj
 from matplotlib import pyplot as plt
 
-default_test_image = r"f:\Working_Folder\02_Poker_Bot\winamax_bot\screenshot_log\log_08052021102022.png"
+default_test_image = r"D:\Poker_Bot\winamax_bot\screenshot_log\log_17042021183253.png"
 class Table(object):
     # General tools that are used to operate the pokerbot and are valid for all tables
     def __init__(self, p, gui_signals, game_logger, version, whnd, bonatablemodel):
