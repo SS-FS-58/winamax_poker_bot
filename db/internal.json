@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "5e78e6e2b272b6395c85813c"
+  },
+  "preflop_url": "decisionmaker/preflop.xlsx",
+  "current_version": "1.0",
+  "dl": "dllink",
+  "lasted_updates": "2020/3/24"
+}]
