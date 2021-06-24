@@ -32,13 +32,13 @@ import random
 version = 2.33
 
 # Table Title search strings
-Bonapoker_title_string1 = r'NL Holdem'
-# Bonapoker_title_string1 = r'timeshow'
-# Bonapoker_title_string1 = r'POKARA'
-Bonapoker_title_string3 = r'Freeroll'
-Bonapoker_title_string2 = r'Covid 19'
-Bonapoker_title_string4 = r'124'
-Bonapoker_title_string_general = r'NL H'
+WinamazPoker_title_string1 = r'NL Holdem'
+# WinamazPoker_title_string1 = r'timeshow'
+# WinamazPoker_title_string1 = r'POKARA'
+WinamazPoker_title_string3 = r'Freeroll'
+WinamazPoker_title_string2 = r'Covid 19'
+WinamazPoker_title_string4 = r'124'
+WinamazPoker_title_string_general = r'NL H'
 
 # Where do you save the table screenshot
 image_backup_filepath = r'D:\Poker_Bot\winamax_bot\screenshot_log'
@@ -387,17 +387,17 @@ class WindowsManager(threading.Thread):
     def run(self): 
         while True:
             try:
-                bona_windows_list = gw.getWindowsWithTitle(Bonapoker_title_string_general)
-                # if len(gw.getWindowsWithTitle(Bonapoker_title_string2)) > 0:
-                #     bona_windows_list.extend(gw.getWindowsWithTitle(Bonapoker_title_string2))
-                if len(gw.getWindowsWithTitle(Bonapoker_title_string3)) > 0:
-                    bona_windows_list.extend(gw.getWindowsWithTitle(Bonapoker_title_string3))
-                # if len(gw.getWindowsWithTitle(Bonapoker_title_string_general)) > 0:
-                #     bona_windows_list.extend(gw.getWindowsWithTitle(Bonapoker_title_string_general))
+                bona_windows_list = gw.getWindowsWithTitle(WinamazPoker_title_string_general)
+                # if len(gw.getWindowsWithTitle(WinamazPoker_title_string2)) > 0:
+                #     bona_windows_list.extend(gw.getWindowsWithTitle(WinamazPoker_title_string2))
+                if len(gw.getWindowsWithTitle(WinamazPoker_title_string3)) > 0:
+                    bona_windows_list.extend(gw.getWindowsWithTitle(WinamazPoker_title_string3))
+                # if len(gw.getWindowsWithTitle(WinamazPoker_title_string_general)) > 0:
+                #     bona_windows_list.extend(gw.getWindowsWithTitle(WinamazPoker_title_string_general))
                 
                 if len(bona_windows_list) == 0:
                     new_model = BonaTableModel()
-                    new_model = self.tabletestmodel_controller.add(Bonapoker_title_string1 + r'100 Level: 4 Blinds: 100/200 Next blinds: 150/300',0)
+                    new_model = self.tabletestmodel_controller.add(WinamazPoker_title_string1 + r'100 Level: 4 Blinds: 100/200 Next blinds: 150/300',0)
                     t1 = ThreadManager(1, "Test_Thread1", 1, gui_signals, 0 ,new_model)
                     screenshot_mode = False
                     t1.start()
@@ -420,7 +420,7 @@ class WindowsManager(threading.Thread):
                         # add thread
                         if current_whnd not in self.bona_bot_tread_list:
                             # table_name_CN = re.split('- Holdem NL', bona_window.title)[0]
-                            # table_name_EN = re.sub(Bonapoker_title_string1, 'Bona Table', table_name_CN)
+                            # table_name_EN = re.sub(WinamazPoker_title_string1, 'Bona Table', table_name_CN)
                             new_model = BonaTableModel()
                             new_model = self.tabletestmodel_controller.add(bona_window.title,current_whnd)
                             self.bona_bot_tread_list[current_whnd] = ThreadManager(bots_num, bona_window.title, bots_num, self.gui_signals, current_whnd, new_model)

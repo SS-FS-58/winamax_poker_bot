@@ -1,7 +1,7 @@
 import threading
 
 # windows manager consts
-Bonapoker_title_string1 = r'德州扑克'
+WinamazPoker_title_string1 = r'德州扑克'
 
 class WindowsManager(threading.Thread):
     def __init__(self, gui_signals):
@@ -13,7 +13,7 @@ class WindowsManager(threading.Thread):
     def run(self): 
         while True:
             try:
-                bona_windows_list = gw.getWindowsWithTitle(Bonapoker_title_string1)
+                bona_windows_list = gw.getWindowsWithTitle(WinamazPoker_title_string1)
 
                 # new_window_handles = []
                 # for bona_window in sorted(bona_windows_list, key=lambda x: x.left):
@@ -43,7 +43,7 @@ class WindowsManager(threading.Thread):
                         # add thread
                         if current_whnd not in self.bona_bot_tread_list:
                             table_name_CN = re.split('- Holdem NL', bona_window.title)[0]
-                            table_name_EN = re.sub(Bonapoker_title_string1, 'Bona Table', table_name_CN)
+                            table_name_EN = re.sub(WinamazPoker_title_string1, 'Bona Table', table_name_CN)
                             self.bona_bot_tread_list[current_whnd] = ThreadManager(bots_num, table_name_EN, bots_num, self.gui_signals, current_whnd)
                             self.bona_bot_tread_list[current_whnd].daemon = True
                             self.bona_bot_tread_list[current_whnd].start()

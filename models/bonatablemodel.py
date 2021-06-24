@@ -5,8 +5,8 @@ from datetime import timedelta
 
 # const
 Bonapoker_title_TexasHoldem_cn = r'BONA NLHE '
-# Bonapoker_title_string1 = r'timeshow'
-# Bonapoker_title_string1 = r'POKARA'
+# WinamazPoker_title_string1 = r'timeshow'
+# WinamazPoker_title_string1 = r'POKARA'
 Bonapoker_title_Tounament2 = r'Freeroll'
 Bonapoker_title_Tounament1 = r'Covid 19'
 Name_Time_split_string = r' - Holdem NL'
